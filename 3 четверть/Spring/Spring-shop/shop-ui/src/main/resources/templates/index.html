@@ -190,10 +190,9 @@
 					<div class="product_grid">
 
 
-
 						<!-- Product -->
 						<div class="product" th:each="product : ${products}">
-							<div class="product_image"><img th:src="@{/main/picture/{pictureId}(pictureId=${product.pictures.get(0).id})}" alt=""></div>
+							<div class="product_image"><img th:src="@{http://localhost:8080/picture/picture/{pictureId}(pictureId=${product.getPictureIds().get(0)})}" alt=""></div>
 							<div class="product_content">
 								<div class="product_title"><a th:href="@{/main/product/{id}(id=${product.id})}" th:text="${product.name}">Smart Phone</a></div>
 								<div class="product_price" th:text="${product.price + '$'}">$670</div>

@@ -24,18 +24,10 @@ public class ProductServiceImpl implements ProductService {
         return productRepository.findById(id).map(ProductRepr::new);
     }
 
-    public List<List<ProductRepr>> findAllAndSplitProductsBy(int groupSize) {
-        List<List<ProductRepr>> result = new ArrayList<>();
-        List<ProductRepr> subList = new ArrayList<>();
+    public List<ProductRepr> findAllAndSplitProductsBy() {
+        List<ProductRepr> result = new ArrayList<>();
         for (Product product : productRepository.findAll()) {
-            subList.add(new ProductRepr(product));
-            if (subList.size() == groupSize) {
-                result.add(subList);
-                subList = new ArrayList<>();
-            }
-        }
-        if (!subList.isEmpty()) {
-            result.add(subList);
+            result.add(new ProductRepr(product));
         }
         return result;
     }

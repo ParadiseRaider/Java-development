@@ -9,5 +9,5 @@ public interface ProductService extends Serializable {
 
     Optional<ProductRepr> findById(Long id);
 
-    List<List<ProductRepr>> findAllAndSplitProductsBy(int groupSize);
+    List<ProductRepr> findAllAndSplitProductsBy();
 }

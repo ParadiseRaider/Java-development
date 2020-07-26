@@ -88,10 +88,10 @@
 				<!-- Product Image -->
 				<div class="col-lg-6">
 					<div class="details_image">
-						<div class="details_image_large"><img th:src="@{/main/picture/{pictureId}(pictureId=${productId.pictures.get(0).id})}" alt=""><div class="product_extra product_new"><a href="categories.html">New</a></div></div>
+						<div class="details_image_large"><img th:src="@{http://localhost:8080/picture/picture/{pictureId}(pictureId=${productId.getPictureIds().get(0)})}" alt=""><div class="product_extra product_new"><a href="categories.html">New</a></div></div>
 						<div class="details_image_thumbnails d-flex flex-row align-items-start justify-content-between">
-							<div th:each="product : ${productId.pictures}" class="details_image_thumbnail active" th:data-image="@{/main/picture/{pictureId}(pictureId=${product.id})}">
-								<img th:src="@{/main/picture/{pictureId}(pictureId=${product.id})}" alt=""></div>
+							<div th:each="product : ${productId.getPictureIds()}" class="details_image_thumbnail active" th:data-image="@{http://localhost:8080/picture/picture/{pictureId}(pictureId=${product})}">
+								<img th:src="@{http://localhost:8080/picture/picture/{pictureId}(pictureId=${product})}" alt=""></div>
 						</div>
 					</div>
 				</div>
@@ -106,6 +106,7 @@
 						<!-- In Stock -->
 						<div class="in_stock_container">
 							<div class="availability">Availability:</div>
+							<div class="details_price" th:text="${productId.countInStock}">1</div>
 							<span>In Stock</span>
 						</div>
 						<div class="details_text">
