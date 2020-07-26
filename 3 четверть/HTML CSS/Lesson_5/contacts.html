@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Контакты</title>
+    <link rel="stylesheet" href="Styles/style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Добро пожаловать</h2>
+        <div class="header">
+            <img src="images/logo.jpg" alt="stalker-logo">
+            <div class="shop-name">
+                Stalker shop
+            </div>
+            <ul class="main-menu">
+                <li>
+                    <a href="index.html">Главная</a>
+                </li>
+                <li>
+                    <a href="catalog.html">Каталог</a>
+                </li>
+                <li>
+                    <a href="contacts.html">Контакты</a>
+                </li>
+            </ul>
+        </div>
+        <hr>
+        <h2>Контакты</h2>
+        <form class="contacts-form" action="base.php" method="post">
+            <fieldset>
+                <legend>Напишите нам</legend>
+                <input required name="login" id="username" type="text" placeholder="Введите ваше имя"><br>
+                <input required name="email" id="usermail" type="email" placeholder="Введите ваш электронный адрес"><br>
+                <input name="text" id="usertext" type="text" placeholder="Введите тему сообщения"><br>
+                <label for="usertextmail">Суть вашего письма</label><br>
+                <textarea name="textmail" id="usertextmail" cols="20" rows="5"></textarea><br>
+                <input type="submit">
+            </fieldset>
+        </form>
+        <h3>Адрес</h3>
+        <b>Телефон: </b>+7 123 456 78 90<br>
+        <b>Адрес: </b>о. Белый<br>
+        <b>Email: </b>stalter3000@radiation.ru<br>
+        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aca565158176d3e06300e1514ac7b0a86f2c3f92513e23e8fc5ccebf6ccaaa60d&amp;width=100%&amp;height=374px&amp;lang=ru_RU&amp;scroll=true"></script>
+        <hr>
+        <div class="footer">&copy; "Все права защищены"</div>
+    </div>
+</body>
+</html>

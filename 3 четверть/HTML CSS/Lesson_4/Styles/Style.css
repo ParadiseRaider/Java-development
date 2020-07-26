@@ -1,0 +1,111 @@
+body {
+    background: #f8f8f8;
+}
+
+p {
+    text-align: justify;
+}
+
+.main-menu {
+    list-style: none;
+}
+
+.main-menu li a {
+    color: fuchsia;
+    font-size: 20px;
+    font-style: italic;
+    font-family: "Comic Sans MS", serif;
+    text-decoration: none;
+}
+
+.main-menu li a:hover {
+    color: blueviolet;
+    text-decoration: underline;
+}
+
+.header img {
+    width: 100px;
+}
+
+.headers {
+    color: black;
+    font-size: 18px;
+    font-weight: 400;
+    background: #eaeaea;
+}
+
+.products-short {
+    color: #707070;
+    font-size: 14px;
+    font-style: italic;
+    line-height: 16px;
+}
+
+.products-full {
+    color: #484343;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.products-short:first-letter,
+.products-full:first-letter {
+    color: red;
+    font-family: Arial, sans-serif;
+    font-size: 25px;
+}
+
+.products-list {
+    border-collapse: collapse;
+    color: blue;
+    list-style-image: url("../images/marker.png");
+    font-size: 19px;
+    font-style: italic;
+}
+
+.products-list td:nth-child(2n+1):before {
+    content: url("../images/marker.png");
+}
+
+.products-list td {
+    border: 1px solid green;
+    padding: 5px;
+}
+
+.product-img {
+    width: 200px;
+    border: 2px dashed red;
+}
+
+.product-img:hover {
+    border-color: transparent;
+}
+
+.contacts-form input[type="text"],
+.contacts-form input[type="email"] {
+    width: 350px;
+    height: 30px;
+    color: darkblue;
+    font-size: 20px;
+    font-family: "Comic Sans MS", sans-serif;
+    text-transform: capitalize;
+}
+
+.contacts-form input[type="email"]:focus {
+    background: cadetblue;
+    color: brown;
+}
+
+.contacts-form textarea {
+    width: 350px;
+    height: 250px;
+    color: darkblue;
+    font-size: 20px;
+}
+
+.footer {
+    text-align: center;
+    height: 100px;
+    background: cornflowerblue;
+    font-weight: bold;
+}

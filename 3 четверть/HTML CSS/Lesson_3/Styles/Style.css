@@ -1,0 +1,65 @@
+body {
+    background: #f8f8f8;
+}
+
+.main-menu {
+    list-style: none;
+}
+
+.main-menu li a {
+    color: fuchsia;
+    font-size: 20px;
+    font-style: italic;
+    font-family: "Comic Sans MS", serif;
+    text-decoration: none;
+}
+
+.headers {
+    color: black;
+    font-size: 18px;
+    font-weight: 400;
+    background: #eaeaea;
+}
+
+.products-short {
+    color: #707070;
+    font-size: 14px;
+    font-style: italic;
+    line-height: 16px;
+}
+
+.products-full {
+    color: #484343;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+}
+
+.products-list li {
+    color: blue;
+    list-style-image: url("../images/marker.png");
+    font-size: 19px;
+    font-style: italic;
+}
+
+.product-img {
+    width: 200px;
+    border: 2px dashed red;
+}
+
+.contacts-form input[type="text"],
+.contacts-form input[type="email"] {
+    width: 350px;
+    height: 30px;
+    color: darkblue;
+    font-size: 20px;
+    font-family: "Comic Sans MS";
+}
+
+.contacts-form textarea {
+    width: 350px;
+    height: 250px;
+    color: darkblue;
+    font-size: 20px;
+}

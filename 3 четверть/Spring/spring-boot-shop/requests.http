@@ -1,0 +1,32 @@
+GET http://localhost:8080/Spring_boot_shop/api/v1/product/all
+
+###
+
+GET http://localhost:8080/Spring_boot_shop/api/v1/product/29/id
+
+###
+
+POST http://localhost:8080/Spring_boot_shop/api/v1/product
+Content-Type: application/json
+
+{
+  "title": "Football",
+  "description": "Super-puper ball",
+  "cost": 3333.00
+}
+
+###
+
+DELETE http://localhost:8080/Spring_boot_shop/api/v1/product/27/id
+
+###
+
+PUT http://localhost:8080/Spring_boot_shop/api/v1/product
+Content-Type: application/json
+
+{
+  "id": 27,
+  "title": "Football",
+  "description": "Super-puper ball",
+  "cost": 4333.00
+}

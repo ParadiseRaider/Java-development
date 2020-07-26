@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+$HeaderBgImage: url("../images/indexBack.jpg") no-repeat top/cover;
+$SocialIconsColor: #f8f8f8;
+$bodyBgColor: #abeafa;
+$WelcomeBgColor: #fff51f;
+$FontFamily1: "Raleway", sans-serif;
+$FontFamily2: "Roboto", sans-serif;
+$ProductsContainerBgColor: #abeafa;
+$ProductsWrapBgColor: #fff;
+$BodyFootBrandsBgColor: #fff;
+$BodyFootInstagrammBgColor: #eaeaea;
+$BodyFootPhotosBgColor: #eaeaea;
+$BodyFootSocialBgColor: #eaeaea;
+
+%productNewHotBefore {
+  position: absolute;
+  top: 0;
+  left: 223px;
+}
+
+%productNewHotAfter {
+  font-size: 9px;
+  font-family: $FontFamily2;
+  color: #fff;
+  line-height: 1.2;
+  position: absolute;
+  top: 9px;
+  left: 244px;
+}
+
+@mixin textMsg($_font-size, $_font-family, $_color, $_line-height, $_font-style: normal, $_font-weight: bold) {
+  font-size: $_font-size;
+  font-family: $_font-family;
+  color: $_color;
+  font-weight: $_font-weight;
+  line-height: $_line-height;
+  font-style: $_font-style;
+}
