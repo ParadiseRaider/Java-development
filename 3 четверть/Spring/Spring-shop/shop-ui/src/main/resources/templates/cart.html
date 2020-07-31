@@ -108,7 +108,7 @@
 						<!-- Name -->
 						<div class="cart_item_product d-flex flex-row align-items-center justify-content-start">
 							<div class="cart_item_image">
-								<div><img th:src="@{/main/picture/{pictureId}(pictureId=${lineItem.getProductRepr().getPictureIds().get(0)})}" alt=""></div>
+								<div><img th:src="@{http://localhost:8080/picture/picture/{pictureId}(pictureId=${lineItem.getProductRepr().getPictureIds().get(0)})}" alt=""></div>
 							</div>
 							<div class="cart_item_name_container">
 								<div class="cart_item_name"><a th:href="@{/main/product/{id}(id=${lineItem.getProductRepr().id})}" th:text="${lineItem.getProductRepr().name}">Smart Phone Deluxe Edition</a></div>
