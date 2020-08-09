@@ -21,6 +21,11 @@ public class Brand implements Serializable {
             cascade = CascadeType.ALL)
     private List<Product> products;
 
+    @Override
+    public boolean equals(Object obj) {
+        return this.name.equals(((Brand)obj).getName());
+    }
+
     public Long getId() {
         return id;
     }

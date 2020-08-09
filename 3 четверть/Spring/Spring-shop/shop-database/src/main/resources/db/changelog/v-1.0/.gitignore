@@ -1,0 +1,4 @@
+/01-create-user-and-role-tables.sql
+/01-drop-user-and-role-tables.sql
+/01-insert-default-users.sql
+/db.changelog-v1.0.xml
