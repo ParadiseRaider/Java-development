@@ -1,0 +1,3 @@
+/01-create-product-related-tables.sql
+/02-alter-user-table.sql
+/db.changelog-v2.0.xml
