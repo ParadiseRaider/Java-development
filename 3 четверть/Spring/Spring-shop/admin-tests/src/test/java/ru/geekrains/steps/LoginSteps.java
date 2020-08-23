@@ -52,6 +52,42 @@ public class LoginSteps {
         webDriver.findElement(By.id("logged-in-username"));
     }
 
+    @When("^I click roles$")
+    public void openRoles() throws InterruptedException {
+        WebElement webElement = webDriver.findElement(By.id("roles"));
+        Thread.sleep(1000);
+        webElement.click();
+        Thread.sleep(1000);
+    }
+
+    @When("^I click new roles$")
+    public void newRoles() throws InterruptedException {
+        WebElement webElement = webDriver.findElement(By.id("new_role"));
+        Thread.sleep(1000);
+        webElement.click();
+        Thread.sleep(1000);
+    }
+
+    @When("^I enter role name as \"([^\"]*)\"$")
+    public void roleNameEnter(String name) throws Throwable {
+        WebElement webElement = webDriver.findElement(By.id("name"));
+        webElement.sendKeys(name);
+        Thread.sleep(2000);
+    }
+
+    @When("^I click on submit button$")
+    public void createNewRole() throws InterruptedException {
+        WebElement webElement = webDriver.findElement(By.id("role_create"));
+        Thread.sleep(3000);
+        webElement.click();
+        Thread.sleep(3000);
+    }
+
+    @Then("^Table roles is create$")
+    public void tableRolesExist() throws Throwable {
+        webDriver.findElement(By.id("roles"));
+    }
+
     @When("^Open dropdown menu$")
     public void openDropDownMenu() throws InterruptedException {
         WebElement webElement = webDriver.findElement(By.id("logged-in-username"));
