@@ -8,7 +8,7 @@
         <ul class="list-unstyled">
             <li th:classappend="${activePage == 'Users'} ? active"><a th:href="@{/users}">
                 <i class="fa fa-fw fa-link"></i> Users</a></li>
-            <li th:classappend="${activePage == 'Roles'} ? active"><a th:href="@{/roles}">
+            <li id="roles" th:classappend="${activePage == 'Roles'} ? active"><a th:href="@{/roles}">
                 <i class="fa fa-fw fa-link"></i> Roles</a></li>
             <li th:classappend="${activePage == 'Categories'} ? active"><a th:href="@{/categories}">
                 <i class="fa fa-fw fa-link"></i> Categories</a></li>
