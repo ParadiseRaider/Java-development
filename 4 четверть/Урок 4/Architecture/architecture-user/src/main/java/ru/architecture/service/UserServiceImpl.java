@@ -1,10 +1,10 @@
 package ru.architecture.service;
 
-import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
+import ru.architecture.service.commands.Command;
+import ru.architecture.service.commands.PayRoom;
+import ru.architecture.service.commands.PayTel;
+import ru.architecture.service.commands.PayZhkx;
 
-@Service
-@Transactional
 public class UserServiceImpl implements UserService {
 
     @Override
@@ -16,5 +16,27 @@ public class UserServiceImpl implements UserService {
     public Integer depositMoney() {
         //Код чтоб узнать количество денег на счету
         return null;
+    }
+
+    @Override
+    public void payService(String s) {
+        Command command;
+        switch (s) {
+            case "Zhkx":
+                command = new PayZhkx();
+                break;
+            case "Tel":
+                command = new PayTel();
+                break;
+            case "Room":
+                command = new PayRoom();
+                break;
+            default:
+                command = null;
+                break;
+        }
+        if (command!=null) {
+            command.execute();
+        }
     }
 }
