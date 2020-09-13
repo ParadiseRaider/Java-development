@@ -1,6 +1,5 @@
 package ru.architecture.service;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -9,13 +8,12 @@ import java.util.List;
 @Service
 @Transactional
 public class PolicyImpl implements Policy {
-    private UserService userService;
-    private AdminService adminService;
+    private final UserService userService;
+    private final AdminService adminService;
 
-    @Autowired
-    public PolicyImpl(UserService userService, AdminService adminService) {
-        this.userService = userService;
-        this.adminService = adminService;
+    public PolicyImpl() {
+        this.userService = new UserServiceImpl();
+        this.adminService = new AdminServiceImpl();
     }
 
     @Override
@@ -46,5 +44,10 @@ public class PolicyImpl implements Policy {
     @Override
     public Integer depositMoney() {
         return userService.depositMoney();
+    }
+
+    @Override
+    public void payService(String s) {
+        userService.payService(s);
     }
 }
